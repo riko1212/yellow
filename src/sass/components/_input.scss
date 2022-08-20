@@ -1,0 +1,13 @@
+.input {
+  height: 42px;
+  border: 1px solid #ffe550;
+  border-radius: 30px;
+  background-color: transparent;
+  padding-left: 11px;
+}
+
+.sinput::placeholder {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #505050;
+}
