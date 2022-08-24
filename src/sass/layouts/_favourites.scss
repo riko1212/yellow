@@ -27,4 +27,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 300ms linear;
+  &:hover,
+  &:focus {
+    border-color: #bbf330;
+  }
 }

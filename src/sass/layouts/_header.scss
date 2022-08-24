@@ -5,18 +5,20 @@
   > .container {
     display: flex;
     align-items: center;
+    position: relative;
   }
 }
 
 .header-right {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
-
-.header-list {
-  display: flex;
-  gap: 28px;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  @include tablet {
+    position: static;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
 }
 
 .header-link {
@@ -27,4 +29,24 @@
 
 .header-btn {
   margin-left: 28px;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.menu-open {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin-left: auto;
+  display: block;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    display: none;
+  }
 }

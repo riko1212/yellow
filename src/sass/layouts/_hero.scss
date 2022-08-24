@@ -1,63 +1,108 @@
 .hero {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  // padding-top: 159px;
+  // padding-bottom: 0px;
+  padding-top: 60px;
+  padding-bottom: 50px;
   > .container {
     display: flex;
     align-items: center;
+    position: relative;
   }
 }
 .hero-content {
-  max-width: 500px;
-  margin-right: 152px;
+  // max-width: 500px;
+  // margin-right: 152px;
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 33px;
+  line-height: calc(33 / 28);
   color: var(--main-color);
   margin-bottom: 28px;
+  @include tablet {
+    font-size: 42px;
+    line-height: calc(49 / 42);
+    max-width: 537px;
+    margin-bottom: 44px;
+  }
+  @include desktop {
+    font-size: 48px;
+    line-height: 1.2;
+  }
 }
 .hero-text {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--main-color);
-  margin-bottom: 40px;
+  margin-bottom: 28px;
+  @include tablet {
+    margin-bottom: 40px;
+    max-width: 336px;
+  }
 }
 
 .swiper-slide {
   padding-left: 14px;
   padding-right: 14px;
 }
+
+.hero-slider {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 320px;
+    position: absolute;
+    right: 15px;
+  }
+}
 .hero-slide-item {
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  border: 26px solid #ffe550;
+  @include tablet {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 14px solid #ffe550;
+  }
+  @include desktop {
+    width: 580px;
+    height: 580px;
+    border: 26px solid #ffe550;
+  }
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
   left: 0;
-  width: 48px;
-  height: 40px;
+  width: 34px;
+  height: 28px;
   background: #fefefe;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
+  @include desktop {
+    width: 48px;
+    height: 40px;
+  }
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
   right: 0;
-  width: 48px;
-  height: 40px;
+  width: 34px;
+  height: 28px;
   background: #fefefe;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
+  &:hover::after,
+  &:focus::after {
+    color: #7eb101;
+  }
+  @include desktop {
+    width: 48px;
+    height: 40px;
+  }
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 28px;
   color: #2c2c2c;
+  transition: color 300ms linear;
 }

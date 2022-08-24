@@ -6,8 +6,16 @@
   padding-left: 11px;
 }
 
-.sinput::placeholder {
+.input::placeholder {
   font-size: 12px;
   line-height: 1.5;
   color: #505050;
+}
+
+.input:not(:focus):not(:placeholder-shown):valid {
+  border-color: #7eb101;
+}
+
+.input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: #ff705d;
 }
