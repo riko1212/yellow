@@ -1,9 +1,22 @@
 .subscribe {
-  padding-top: 93px;
-  padding-bottom: 100px;
-  background-image: url(../images/banan.png);
-  background-position: right 23px bottom 64px;
+  padding-top: 95px;
+  padding-bottom: 60px;
+  background-image: url(../images/banan-mob.png);
+  background-position: top;
+
   background-repeat: no-repeat;
+  @include tablet {
+    padding-bottom: 100px;
+    padding-top: 156px;
+    background-image: url(../images/banan-tab.png);
+    background-position: right 32px top;
+  }
+  @include desktop {
+    padding-bottom: 100px;
+    padding-top: 94px;
+    background-image: url(../images/banan.png);
+    background-position: right 23px bottom 64px;
+  }
 }
 
 .subscribe-content {
@@ -15,16 +28,31 @@
 }
 
 .subscribe-text {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
 }
 
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  @include tablet {
+    justify-content: flex-start;
+  }
 }
 
 .subscribe-input {
-  width: 394px;
-  margin-right: 32px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include tablet {
+    width: 394px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-btn {

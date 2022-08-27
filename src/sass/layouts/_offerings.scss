@@ -1,55 +1,122 @@
 .offerings {
-  padding-top: 234px;
-  padding-bottom: 76px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background-image: url(../images/top-bg-mob.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include tablet {
+    padding-top: 152px;
+    padding-bottom: 100px;
+    background-size: cover;
+    background-image: url(../images/top-bg-tab.png);
+  }
+  @include desktop {
+    padding-top: 234px;
+    padding-bottom: 76px;
+    background-image: url(../images/top-bg.png);
+  }
   > .container {
-    display: flex;
-    align-items: center;
-    gap: 90px;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 90px;
+    }
   }
 }
 
 .offerings-pic {
-  width: 550px;
-  height: 550px;
+  // width: 550px;
+  // height: 550px;
+  width: 280px;
+  height: 280px;
   border: 5px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  @include tablet {
+    width: 357px;
+    height: 357px;
+    margin-left: 0;
+  }
+  @include desktop {
+    width: 550px;
+    height: 550px;
+  }
 }
 .offerings-white {
-  width: 502px;
-  height: 502px;
+  // width: 502px;
+  // height: 502px;
+  width: 255px;
+  height: 255px;
   background-color: #ffffff;
   border-radius: 50%;
   position: relative;
+  @include tablet {
+    width: 326px;
+    height: 326px;
+  }
+  @include desktop {
+    width: 502px;
+    height: 502px;
+  }
 }
 
 .offerings-img {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 81px;
+  bottom: 41px;
+  @include tablet {
+    bottom: 52px;
+  }
+  @include desktop {
+    bottom: 81px;
+  }
 }
 
 .offerings-title {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  @include tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .offerings-text {
-  margin-bottom: 40px;
-  max-width: 500px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
 }
 
 .offerings-list {
   display: flex;
-  gap: 67px;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 28px;
+  @include tablet {
+    gap: 116px;
+    margin-bottom: 40px;
+  }
+  @include tablet {
+    gap: 67px;
+    margin-bottom: 34px;
+  }
 }
 
 .offerings-item {
-  width: calc((100% - 67px) / 2);
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 67px) / 2);
+  }
 }
 
 .offerings-icon-wrap {

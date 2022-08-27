@@ -2,7 +2,21 @@
   <div class="container">
     <div class="offerings-pic">
       <div class="offerings-white">
-        <img src="./images/aple.png" alt="apple" class="offerings-img" />
+        <picture>
+          <source
+            srcset="./images/aple.png 1x, ./images/aple-2x.png 2x"
+            media="(min-width:1280px)"
+          />
+          <source
+            srcset="./images/aple-tab.png 1x, ./images/aple-tab-2x.png 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/aple-mob.png 1x, ./images/aple-mob-2x.png 2x"
+            media="(max-width:767px)"
+          />
+          <img src="./images/aple-mob.png" alt="apple" class="offerings-img" />
+        </picture>
       </div>
     </div>
     <div class="offerings-content">

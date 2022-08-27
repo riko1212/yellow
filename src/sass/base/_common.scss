@@ -6,19 +6,19 @@ body {
 }
 
 .hero-wrap {
-  background-image: url(../images/top-bg.png);
-  background-size: auto;
-  background-position: top;
-  background-repeat: no-repeat;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .customers-wrap {
-  background-image: url(../images/mid-bg.png);
-  background-size: auto;
+  background-image: url(../images/mid-bg-mob.png);
+  background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
   max-width: 1280px;
   margin: 0 auto;
+  @include tablet {
+    background-image: url(../images/mid-bg-tab.png);
+  }
+  @include desktop {
+    background-image: url(../images/mid-bg.png);
+  }
 }
