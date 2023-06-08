@@ -13,6 +13,7 @@
   position: absolute;
   right: 15px;
   top: 40px;
+  z-index: 999;
   @include tablet {
     position: static;
     display: flex;
